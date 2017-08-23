@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/icons"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="360dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:enabled="false"
+                android:id="@+id/txt_nearby_backbtn"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="20sp"
+
+                android:text="Looking For...?"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:id="@+id/txt_invitfrnd_closebtn"
+                android:text="@string/fa_close_ico"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:id="@+id/linear_btnOuter"
+            android:layout_height="135dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:id="@+id/linear_nearbybtnbg"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="85dp"
+                    android:background="@drawable/friends_icon"
+                    android:layout_height="85dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="60dp"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    android:id="@+id/btn_nearfrnds_friend"
+                    android:textColor="@color/icons"
+                    />
+
+                <Button
+                    android:layout_width="85dp"
+                    android:background="@drawable/unselect_possibilities"
+                    android:layout_height="85dp"
+                    android:textColor="@color/icons"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    android:id="@+id/btn_nearfrnds_possibilities"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/linear_nearbytextbg"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="0dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:text="Friends"
+                    android:textColor="@color/primary_text"
+                    />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:text="Possibilities" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:id="@+id/linear_nearfriends_friends"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:background="@drawable/square_line"
+                android:id="@+id/spn_nearfrnd_frndlist"
+                />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/icons"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:textSize="18sp"
+                android:text="Proceed"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/buttongradient"
+                android:id="@+id/btn_nearfrnd_all"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:id="@+id/linear_nearfriends_nofriends"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/icons"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:textSize="16sp"
+                android:background="@drawable/solid_rectangle_teal_background"
+                android:text="You have added no friends. Please add friends first."
+                android:id="@+id/txt_nearfrnd_no"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:id="@+id/linear_nearfriends_posibilities"
+            android:visibility="visible"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="2dp"
+                    android:visibility="visible"
+                    android:background="@drawable/square_line"
+                    android:id="@+id/spn_nearfrnd_interestlist"
+                    />
+
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:progress="25"
+                    android:max="100"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:textSize="14sp"
+                    android:gravity="top"
+                    android:layout_gravity="right|center"
+                    android:text="0 KM"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="50dp"
+                    android:layout_height="22dp"
+                    android:textSize="14sp"
+                    android:gravity="top|center"
+                    android:textStyle="bold"
+                    android:id="@+id/seek_count"
+                    android:layout_gravity="center"
+                    android:text="25 KM"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:textSize="14sp"
+                    android:gravity="right"
+                    android:layout_gravity="right|center"
+                    android:text="100 KM"/>
+                </LinearLayout>
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/icons"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:text="Proceed"
+                android:textAllCaps="false"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/buttongradient"
+                android:id="@+id/btn_nearfrnd_interest"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <realizer.com.makemepopular.view.ProgressWheel
+        android:id="@+id/loadingtrack"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        app:matProg_barColor="@color/colorAccent"
+        app:matProg_progressIndeterminate="true"
+        />
+</RelativeLayout>

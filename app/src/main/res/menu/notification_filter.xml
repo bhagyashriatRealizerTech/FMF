@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="realizer.com.schoolgenieparent.DrawerActivity">
+
+    <item
+        android:id="@+id/action_filter"
+        android:orderInCategory="100"
+        android:title="Add"
+        android:icon="@drawable/filter_icon"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/map_types"
+        android:orderInCategory="100"
+        android:title="Map"
+        android:visible="false"
+        android:icon="@drawable/map_icon"
+        app:showAsAction="always" />
+
+</menu>

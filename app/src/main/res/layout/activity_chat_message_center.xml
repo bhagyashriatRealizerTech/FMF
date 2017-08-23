@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:component="http://schemas.android.com/tools"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="45dp"
+            android:divider="@null"
+            android:scrollbarStyle="outsideInset"
+            android:id="@+id/lstviewquery"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:id="@+id/noData"
+            android:textSize="16sp"
+            android:textColor="@color/secondary_text"
+            android:visibility="gone"
+            android:text="No Messages for this thread."
+            />
+
+        <!--<LinearLayout
+            android:id="@+id/ll_compose_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            android:visibility="visible">-->
+
+           <LinearLayout
+               android:layout_width="40dp"
+               android:layout_alignParentBottom="true"
+               android:id="@+id/emoji_btn_linearouter"
+               android:background="@color/colorPrimaryDark"
+               android:layout_marginLeft="5dp"
+               android:layout_marginBottom="5dp"
+               android:layout_height="40dp">
+               <ImageView
+                   android:id="@+id/emoji_btn"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:src="@drawable/smiley"
+                   />
+               </LinearLayout>
+            <realizer.com.makemepopular.emoji.EmojiconEditText
+                android:id="@+id/emojicon_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="5"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentBottom="true"
+                android:hint="Start typing"
+                android:textSize="15sp"
+                android:paddingLeft="7dp"
+                android:textColor="@color/primary_text"
+                android:background="@drawable/square_background"
+                emojicon:emojiconSize="24sp" />
+           <LinearLayout
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:id="@+id/submitbtn_outer"
+               android:layout_marginRight="5dp"
+               android:layout_marginBottom="5dp"
+               android:background="@color/colorPrimaryDark"
+               android:layout_alignParentBottom="true"
+               android:layout_alignParentRight="true">
+
+               <ImageView
+                   android:id="@+id/submit_btn"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:padding="4dp"
+                   android:src="@drawable/ic_action_send_now"
+                   />
+               </LinearLayout>
+
+        <TextView
+            android:id="@+id/noLongerFriendTxt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:textColor="#fff"
+            android:text="You are no longer part for this Thread."
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            />
+    <realizer.com.makemepopular.view.ProgressWheel
+        android:id="@+id/loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        app:matProg_barColor="@color/colorAccent"
+        app:matProg_progressIndeterminate="true"
+        />
+</RelativeLayout>

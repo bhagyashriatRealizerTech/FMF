@@ -1,0 +1,36 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".chat.ChatThreadListActivity">
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="Done"
+        android:icon="@drawable/setting"
+        app:showAsAction="always">
+        <menu
+            android:background="#000">
+            <item
+                android:id="@+id/user_profile"
+                android:orderInCategory="100"
+                android:title="View Profile"
+                />
+
+            <item
+                android:id="@+id/add_interest"
+                android:orderInCategory="100"
+                android:title="Update Interest"
+                />
+            <item
+                android:id="@+id/about_us"
+                android:orderInCategory="100"
+                android:title="About"
+                 />
+            <item
+                android:id="@+id/user_logout"
+                android:orderInCategory="100"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

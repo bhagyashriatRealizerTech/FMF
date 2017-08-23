@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#00ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:weightSum="5"
+       android:paddingBottom="2dp"
+       android:orientation="horizontal">
+       <realizer.com.makemepopular.view.RoundedImageView
+           android:id="@+id/profile_image_view"
+           android:layout_width="0dp"
+           android:layout_weight="0.9"
+           android:layout_height="65dp"
+           android:layout_gravity="center_vertical"
+           android:scaleType="fitXY"
+           android:src="@drawable/user_icon"
+           android:visibility="gone"
+           />
+        <TextView
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_weight="0.9"
+            android:id="@+id/txtinitial"
+            android:background="@drawable/profilepic_circle"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:text="SD"/>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.8"
+            android:layout_marginLeft="7dp"
+           android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XYZ"
+                android:id="@+id/txtFullName"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:textColor="@color/secondary_text"
+            android:id="@+id/txtdelete"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_close_black"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/border_line"/>
+</LinearLayout>

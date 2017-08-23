@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/map_relative_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <fragment android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".friendnear.FriendNearActivity"/>
+   <!-- <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:max="60"
+        android:layout_marginRight="20dp"
+        android:indeterminate="false"
+        android:visibility="gone"
+        android:progress="60"
+        android:layout_marginTop="5dp"
+        android:progressDrawable="@drawable/circular" />
+    <TextView
+        android:id="@+id/progressCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refreshing after"
+        android:visibility="gone"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/progressBar"
+        android:layout_centerInParent="true"/>-->
+
+    <realizer.com.makemepopular.view.ProgressWheel
+        android:id="@+id/loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        app:matProg_barColor="#02AEEF"
+        app:matProg_progressIndeterminate="true"
+        />
+
+    <LinearLayout
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/marker_image_linear"
+        android:gravity="top|center_horizontal"
+        android:visibility="invisible"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/marker_bg"
+        android:orientation="horizontal">
+        <realizer.com.makemepopular.view.RoundedImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/user_icon_white"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/marker_userimg"
+            android:layout_gravity="center|center_horizontal"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="top"
+            android:layout_marginRight="5dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:id="@+id/txt_marker_username"
+                android:text="Name :"
+                android:layout_marginTop="5dp"
+                android:textSize="13sp"
+                android:textColor="@color/icons"
+                android:gravity="left|center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Name :"
+                android:textSize="10sp"
+                android:textColor="@color/icons"
+                android:id="@+id/txt_marker_userdtls"
+                android:gravity="left|center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update :"
+                android:textSize="10sp"
+                android:textColor="@color/icons"
+                android:id="@+id/txt_marker_lastupdate"
+                android:gravity="left|center"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linear_pagenumber_outer"
+        android:gravity="center_horizontal"
+        android:background="@drawable/map_btn_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:id="@+id/txt_btn_prev"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textColor="#fff"
+            android:text="@string/fa_prevbtn_ico"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:id="@+id/txt_pageno"
+            android:text="Page No:"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:textSize="22sp"
+            android:id="@+id/txt_btn_next"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:text="@string/fa_nextbtn_ico"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

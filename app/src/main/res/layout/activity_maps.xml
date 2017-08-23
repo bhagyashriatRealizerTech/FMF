@@ -1,0 +1,113 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <fragment android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".neaybyplaces.NearyByPlacesActivity"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/map_btn_bg"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:weightSum="4"
+        android:paddingBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/btnRestaurant"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="top|center"
+                android:background="@drawable/circle_bg"
+                android:textColor="#FFF"
+                android:textSize="22sp"
+                android:text="@string/fa_hotel_ico" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restaurant"
+                android:textSize="14sp"
+                android:textColor="#FFF"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="bottom|center"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/btnHospital"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="top|center"
+                android:background="@drawable/circle_bg"
+                android:textColor="#FFF"
+                android:textSize="22sp"
+                android:text="@string/fa_hospital_ico" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hospitals"
+                android:textSize="14sp"
+                android:textColor="#FFF"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="bottom|center"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/btnSchool"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="top|center"
+                android:background="@drawable/circle_bg"
+                android:textColor="#FFF"
+                android:textSize="22sp"
+                android:text="@string/fa_school_ico" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schools"
+                android:textSize="14sp"
+                android:textColor="#FFF"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="bottom|center"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <realizer.com.makemepopular.view.ProgressWheel
+        android:id="@+id/loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        app:matProg_barColor="#02AEEF"
+        app:matProg_progressIndeterminate="true"
+        />
+
+</RelativeLayout>

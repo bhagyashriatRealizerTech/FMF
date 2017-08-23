@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/icons">
+    <realizer.com.makemepopular.expandableview.ActionSlideExpandableListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animationCache="false"
+        android:divider="@null"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollingCache="false"
+        android:smoothScrollbar="true" />
+
+    <TextView
+        android:id="@+id/noDataFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:textColor="@color/primary_text"
+        android:text="You Have No Friends."/>
+
+    <realizer.com.makemepopular.view.ProgressWheel
+        android:id="@+id/loading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        app:matProg_barColor="@color/colorAccent"
+        app:matProg_progressIndeterminate="true"
+        />
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<realizer.com.makemepopular.view.CheckableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:background="@color/icons"
+    android:padding="5dp" >
+
+
+    <RelativeLayout
+        android:id="@+id/id_relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp">
+
+        <FrameLayout
+            android:id="@+id/id_image_frame_layout"
+            android:layout_width="62dp"
+            android:layout_height="62dp">
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/txtinitialPupil"
+                android:background="@drawable/profilepic_circle"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="VS"/>
+            <realizer.com.makemepopular.view.RoundedImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:visibility="gone"
+                android:layout_marginLeft="5dp"
+                android:scaleType="center"
+
+                android:id="@+id/img_user_image" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/id_image_frame_layout"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:textSize="16dp"
+                android:text="hhhhh"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/select_Recipient_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/linearlayout"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:focusable="false"
+                android:enabled="false"
+                android:button="@drawable/multi_radio_chice"
+                android:paddingRight="3dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</realizer.com.makemepopular.view.CheckableRelativeLayout>

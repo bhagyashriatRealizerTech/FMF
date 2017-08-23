@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:component="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/shadowimg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:weightSum="3">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:weightSum="5"
+        android:background="@color/icons"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.4"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:weightSum="2"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <realizer.com.makemepopular.view.RoundedImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/add_friend_img"
+                android:src="@drawable/user_icon"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Friend Name"
+                    android:id="@+id/txt_addfrnd_frndname"
+                    android:gravity="left|center"
+                    android:paddingLeft="8dp"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/primary_text"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Friend Name"
+                    android:id="@+id/txt_addfrnd_frndGender"
+                    android:gravity="left|center"
+                    android:paddingLeft="8dp"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/secondary_text"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addFriendLinearLayout"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="3.5"
+            android:padding="5dp"
+            android:weightSum="2"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fa_addfriend_ico"
+                android:textSize="23sp"
+                android:gravity="bottom|center"
+                android:textColor="@color/colorAccent"
+                android:id="@+id/txt_addfrnd_addfriendbtn"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Friend"
+                android:id="@+id/txt_status"
+                android:gravity="top|center"
+                android:textSize="13sp"
+                android:layout_gravity="center"
+                android:textColor="@color/secondary_text"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/icons">
+
+<LinearLayout
+    android:id="@+id/toggleLayout"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/button_bg_orange"
+    android:layout_centerHorizontal="true"
+    android:layout_height="50dp">
+    <ToggleButton
+        android:id="@+id/sendBtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:background="@drawable/button_bg_green"
+        android:checked="true"
+        android:layout_marginLeft="10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/icons"
+        android:textOff="Sent"
+        android:textSize="16sp"
+        android:textOn="Sent" />
+
+    <ToggleButton
+        android:id="@+id/receiveBtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:textAllCaps="false"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/icons"
+        android:textSize="16sp"
+        android:textOff="Received"
+        android:textOn="Received" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_below="@+id/toggleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/list_notlist">
+
+    </ListView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/notext"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:textColor="@color/primary_text"
+        android:text="No Any Notification Founds."
+        />
+    <realizer.com.makemepopular.view.ProgressWheel
+        android:id="@+id/loading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        app:matProg_barColor="@color/colorAccent"
+        app:matProg_progressIndeterminate="true"
+        />
+</RelativeLayout>

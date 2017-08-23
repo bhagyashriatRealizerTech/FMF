@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="realizer.com.makemepopular">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.javapapers.currentlocationinmap.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.androidtutorialpoint.mymapsappsdirection.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_new_ffm_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:name="android.support.multidex.MultiDexApplication"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashScreen"
+            android:hardwareAccelerated="false" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+          />
+        <activity android:name=".RegistrationActivity"
+            android:screenOrientation="portrait"
+           />
+        <activity android:name=".InterestActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".DashboardActivity" android:screenOrientation="portrait">
+            <intent-filter>   <action android:name="OPEN_ACTIVITY_1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".friendlist.FriendListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".newfriendlist.NewFriendListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".invitejoin.InviteToOthersActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".neaybyplaces.NearyByPlacesActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".friendnear.FriendNearActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".service.TrackShowMap" android:screenOrientation="portrait"/>
+        <activity android:name=".emergency.EmergencyActivity" android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".introscreen.WelcomeActivity" android:screenOrientation="portrait" android:supportsRtl="true"/>
+        <activity android:name=".UserProfileActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".AboutApp" android:screenOrientation="portrait"/>
+        <activity android:name=".notifications.Notification_activity" android:screenOrientation="portrait"/>
+        <activity android:name=".notifications.NotificationDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".notifications.NotificationActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".addfriend.AddFriendAtivity" android:screenOrientation="portrait"/>
+        <activity android:name=".chat.ChatMessageCenterActicity" android:screenOrientation="portrait"
+            />
+        <activity android:name=".chat.ChatThreadListActivity" android:screenOrientation="portrait" />
+        <activity android:name=".chat.GroupThreadDetailsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".chat.InitateNewChatActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".chat.ChatMessageInfo" android:screenOrientation="portrait"/>
+        <activity android:name=".utils.ChatSectionIndexer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" ></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDUdpztiL1gyOfX2gRhjP8eOcC882L6saE" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_new_noti_icon" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimaryDark" />
+        <service
+            android:name=".service.AutoSyncService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <service
+            android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="OPEN_ACTIVITY_1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <!--<service android:name=".InstanceIdService">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.firebase.INSTANCEID_EVENT"/>-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+
+        <receiver android:name="MyReceiver">
+            <intent-filter>
+                <action android:name="com.tutorialspoint.CUSTOM_INTENT">
+                </action>
+            </intent-filter>
+
+        </receiver>
+
+        <receiver android:name=".utils.ConnectivityReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".service.ChatNetworkChangeReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+
+        <!--<receiver android:name=".FCMReceiver">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.tutorialspoint.CUSTOM_FCMINTENT">-->
+                <!--</action>-->
+            <!--</intent-filter>-->
+
+        <!--</receiver>-->
+    </application>
+</manifest>

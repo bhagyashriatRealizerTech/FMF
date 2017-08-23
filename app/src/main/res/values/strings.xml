@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">Find Me Friends</string>
+    <string name="fa_mobile_ico">&#xf095;</string>
+    <string name="fa_user_ico">&#xf007;</string>
+    <string name="fa_email_ico">&#xf0e0;</string>
+    <string name="fa_calendar_ico">&#xf073;</string>
+    <string name="fa_gender_ico">&#xf224;</string>
+    <string name="fa_list_ico">&#xf00b;</string>
+    <string name="fa_alerttringle_ico">&#xf071;</string>
+    <string name="fa_search_ico">&#xf002;</string>
+    <string name="fa_close_ico">&#xf2d4;</string>
+    <string name="fa_ambulance_ico">&#xf0f9;</string>
+    <string name="fa_bellslash_ico">&#xf1f6;</string>
+    <string name="fa_automobile_ico">&#xf1b9;</string>
+
+    <string name="fa_nextbtn_ico">&#xf054;</string>
+    <string name="fa_prevbtn_ico">&#xf053;</string>
+
+    <string name="fa_mobile_new_ico">&#xf098;</string>
+    <!--Dashboard Icons-->
+    <string name="fa_emergency_ico">&#xf06a;</string>
+    <string name="fa_friendnear_ico">&#xf21d;</string><!--&#xf0c0;-->
+    <string name="fa_addfriend_ico">&#xf234;</string>
+    <string name="fa_nearbyplac_ico">&#xf041;</string>
+    <string name="fa_invitefrnd_ico">&#xf2bc;</string>
+    <string name="fa_frndlist_ico">&#xf0c0;</string>
+    <string name="fa_chat_ico">&#xf1d7;</string>
+    <string name="fa_album_ico">&#xf1c5;</string>
+    <string name="fa_notif_ico">&#xf0f3;</string>
+    <string name="fa_backarow_ico">&#xf060;</string>
+    <string name="fa_possibilit_ico">&#xf279;</string>
+
+    <string name="fa_check_ico">&#xf00c;</string>
+    <string name="fa_camera_retro">&#xf083;</string>
+    <string name="fa_mapmarker_ico">&#xf041;</string>
+    <string name="fa_toggle_off_ico">&#xf204;</string>
+    <string name="fa_toggle_on_ico">&#xf205;</string>
+    <string name="fa_dob_ico">&#xf1fd;</string>
+
+    <string name="fa_pending_ico">&#xf252;</string>
+    <string name="fa_right_ico">&#xf054;</string>
+    <string name="fa_down_ico">&#xf078;</string>
+
+    <string name="fa_user_times">&#xf235;</string>
+    <string name="fa_hourglass_1">&#xf251;</string>
+    <string name="fa_filter">&#xf0b0;</string>
+    <string name="fa_times_circle">&#xf057;</string>
+
+    <string-array name="icofont">
+        <item>&#xf29d;</item>
+        <item>&#xf1e7;</item>
+        <item>&#xf1e3;</item>
+        <item>&#xf109;</item>
+        <item>&#xf001;</item>
+        <item>&#xf1ae;</item>
+        <item>&#xf21c;</item>
+        <item>&#xf2a2;</item>
+        <item>&#xf0c0;</item>
+    </string-array>
+
+    <string-array name="interest_text">
+        <item>Trekking/Outing</item>
+        <item>Dating</item>
+        <item>Sports</item>
+        <item>Technical/IT</item>
+        <item>Music</item>
+        <item>Dancing</item>
+        <item>Bikers</item>
+        <item>Gossip</item>
+        <item>Social Work</item>
+
+    </string-array>
+
+
+    <!--Interest Font Awesome Icon-->
+    <string name="fa_trekking_ico">  &#xf29d;</string>
+    <string name="fa_dating_ico">    &#xf1e7;</string>
+    <string name="fa_sports_ico">    &#xf1e3;</string>
+    <string name="fa_technical_ico"> &#xf109;</string>
+    <string name="fa_music_ico">     &#xf001;</string>
+    <string name="fa_dancing_ico">   &#xf1ae;</string>
+    <string name="fa_bikers_ico">    &#xf21c;</string>
+    <string name="fa_gossip_ico">    &#xf2a2;</string>
+    <string name="fa_socialwork_ico">&#xf0c0;</string>
+
+    <string name="fa_hotel_ico">&#xf236;</string>
+    <string name="fa_hospital_ico">&#xf0f8;</string>
+    <string name="fa_school_ico">&#xf19c;</string>
+
+
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello Food!</string>
+    <string name="slide_1_desc">The easiest way to order food from your favourite restaurant!</string>
+
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+</resources>

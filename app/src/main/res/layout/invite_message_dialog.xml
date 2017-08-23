@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/square_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="Invite Friend"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:id="@+id/txt_invitfrnd_closebtn"
+            android:text="@string/fa_close_ico"/>
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="6dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/square_line"
+        android:id="@+id/edtmessage"
+        android:gravity="top"
+        android:hint="Enter Message"
+        android:paddingLeft="10dp"
+        android:textColor="@color/primary_text"
+        android:textColorHint="#c0c0c0"
+        android:layout_above="@+id/btnLogin"
+        android:textSize="16sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_gravity="left"
+        android:id="@+id/txtappLink"
+        android:textColor="#444"
+        android:textStyle="normal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone"
+        android:textSize="15dp"
+        android:text="https://play.google.com/store/apps/details?id=realizer.com.makemepopular"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:background="@drawable/buttongradient"
+            android:layout_height="40dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:id="@+id/btn_send"
+            android:textAllCaps="false"
+            android:text="Send"
+            android:textColor="#FFF"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttongradient"
+            android:layout_height="40dp"
+            android:textColor="#FFF"
+            android:textAllCaps="false"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:id="@+id/btn_cancel"
+            android:text="Cancel"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+</LinearLayout>

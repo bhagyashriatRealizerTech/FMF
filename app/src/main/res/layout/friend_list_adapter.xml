@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:component="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/shadowimg"
+    android:layout_width="match_parent"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_height="wrap_content"
+    android:weightSum="3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:weightSum="5"
+        android:background="@color/icons"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2.9"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:weightSum="6"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <realizer.com.makemepopular.view.RoundedImageView
+                android:id="@+id/frndlist_frndimg"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:scaleType="center"
+                android:src="@drawable/user_icon" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Friend Name"
+                android:id="@+id/txt_frndlst_frndname"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:textColor="@color/primary_text"
+                android:layout_weight="2"
+
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/fa_mapmarker_ico"
+                android:textSize="26sp"
+                android:gravity="center"
+                android:textColor="#777"
+                android:layout_marginRight="5dp"
+                android:id="@+id/txt_frndlst_istracking"
+
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/fa_email_ico"
+                android:textSize="26sp"
+                android:gravity="center"
+                android:textColor="#777"
+
+                android:layout_marginRight="5dp"
+                android:id="@+id/txt_frndlst_ismessage"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/fa_toggle_off_ico"
+                android:textSize="26sp"
+                android:gravity="center"
+                android:textColor="#777"
+                android:layout_marginRight="5dp"
+                android:id="@+id/txt_frndlst_setemergency"
+                android:layout_weight="1"
+                />
+            <!-- <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Hi All"
+                 android:singleLine="true"
+                 android:id="@+id/txtmsg"
+                 android:gravity="left"
+                 android:layout_gravity="left"
+                 android:textColor="@color/black"
+                 />-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

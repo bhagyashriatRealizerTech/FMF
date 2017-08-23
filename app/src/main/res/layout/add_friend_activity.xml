@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/icons"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/secondary_text"
+            android:textSize="12sp"
+            android:text="Increase your friend circle by adding more people."
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:id="@+id/linear_addbuttonouter"
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/square_line"
+                android:gravity="center"
+                android:weightSum="1">
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical|left"
+                    android:weightSum="2"
+                    android:layout_weight="0.41">
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:text="Add Friend by Name and Address"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp"
+                        android:checked="true"
+                        android:buttonTint="@color/colorAccent"
+                        android:id="@+id/rdo_addfriend_byname"
+                        android:layout_weight="1"/>
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textSize="14sp"
+                        android:text="Add Friend by Interest"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/rdo_addfriend_byinterest"
+                        android:textColor="@color/primary_text"
+                        android:buttonTint="@color/colorAccent"
+                        android:layout_weight="1"/>
+                </RadioGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/linearlayout_addfriendbyname"
+            android:layout_marginBottom="10dp"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:hint="Friend Name"
+                    android:textColorHint="#ccc"
+                    android:gravity="left|center"
+                    android:inputType="text"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="14sp"
+                    android:visibility="visible"
+                    android:id="@+id/edt_addfrnd_frndname"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/primary_text"
+                    android:background="@drawable/square_line"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:layout_marginRight="10dp"
+                    android:hint="Friend Address"
+                    android:gravity="left|center"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:visibility="visible"
+                    android:id="@+id/edt_addfrnd_frndaddress"
+                    android:textColorHint="#ccc"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/primary_text"
+                    android:background="@drawable/square_line"/>
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/icons"
+                    android:background="@drawable/circle_clicked"
+                    android:id="@+id/txt_addfrnd_searchfrndbyname"
+                    android:clickable="true"
+                    android:text="@string/fa_search_ico"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/secondary_text"></TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/list_addfrndbynamelist"></ListView>
+
+                <TextView
+                    android:id="@+id/notxtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    android:textStyle="bold"
+                    android:text="No People Found Matching Your Specified Search Criteria."/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/linearlayout_addfriendbyInterest"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/square_line"
+                    android:id="@+id/spn_addfrnd_interestlist"/>
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20sp"
+                    android:layout_gravity="right|center_vertical"
+                    android:gravity="center"
+                    android:textColor="#FFF"
+                    android:background="@drawable/circle_clicked"
+                    android:id="@+id/txt_addfrnd_searchfrndbyinterest"
+                    android:clickable="true"
+                    android:text="@string/fa_search_ico"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/secondary_text"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/list_addfrndbyinterestlist"></ListView>
+
+                <TextView
+                    android:id="@+id/notxtInterstet"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    android:textStyle="bold"
+                    android:text="No People Found Matching Your Specified Search Criteria."/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <realizer.com.makemepopular.view.ProgressWheel
+        android:id="@+id/loading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        app:matProg_barColor="@color/colorAccent"
+        app:matProg_progressIndeterminate="true"
+        />
+</RelativeLayout>

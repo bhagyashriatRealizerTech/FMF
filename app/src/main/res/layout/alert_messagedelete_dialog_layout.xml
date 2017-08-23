@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/square_background"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/titleName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:text="Login"
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:background="@color/colorPrimary"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/primary_text"
+        android:layout_margin="15dp"
+        android:text="All the Data of Previous User will be Deleted,\nDo You want to Proceed?"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_msgDelet_cancel"
+            android:background="@drawable/buttongradient"
+            android:textSize="16sp"
+            android:text="Cancel"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:layout_weight="1"/>
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_msgDelet_delete"
+            android:background="@drawable/emergencybuttongradient"
+            android:textSize="16sp"
+            android:text="Ok"
+            android:textAllCaps="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:textColor="#fff"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+</LinearLayout>
